@@ -2,6 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "bebasregular";
+}
+
+@font-face {
+  font-family: "bebasregular";
+  src: url("./fonts/Bebas-Regular-webfont.eot");
+  src: url("./fonts/Bebas-Regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Bebas-Regular-webfont.woff2") format("woff2"),
+    url("./fonts/Bebas-Regular-webfont.woff") format("woff"),
+    url("./fonts/Bebas-Regular-webfont.ttf") format("truetype"),
+    url("./fonts/Bebas-Regular-webfont.svg#bebasregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
@@ -17,8 +31,10 @@ h1 {
 .first {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 0 -15px;
 }
 
 .first:nth-child(odd) {
@@ -38,7 +54,7 @@ h1 {
 .firstInner1 {
   flex: 50%;
   text-align: center;
-  margin: 0 15px;
+  padding: 0 15px;
 }
 
 .third {
@@ -49,7 +65,6 @@ h1 {
   color: white;
   height: 400px;
   text-align: center;
-  margin: 15px;
   position: relative;
 }
 
@@ -63,4 +78,15 @@ h1 {
 .thirdInner {
   position: absolute;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .firstInner2,
+  .firstInner1 {
+    flex: 100%;
+    width: 100%;
+  }
 }
