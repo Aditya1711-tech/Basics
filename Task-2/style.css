@@ -14,7 +14,7 @@ img {
 .navbarContainer {
   width: 1080px;
   margin: 0 auto;
-  position: fixed;
+  /* position: fixed; */
   /* position: absolute; */
 }
 
