@@ -1,17 +1,17 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
-/* img {
-  width: 100%;
-} */
+body {
+  position: relative;
+}
 
 .container {
-  width: 72%;
+  /* width: 70%; */
+  max-width: 1146px;
   margin: 0 auto;
-  height: auto;
-  z-index: 10;
 }
 
 ul,
@@ -22,9 +22,10 @@ li {
 }
 
 nav {
-  background-color: aquamarine;
-  /* position: fixed; */
+  width: 100vw;
+  position: sticky;
 }
+
 .navContainer {
   padding: 40px 0px 39px 0px;
   display: flex;
@@ -43,23 +44,226 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 -12px;
+}
+
+.navLinks li {
+  padding: 0px 12px;
 }
 
 .slider {
   position: relative;
-  display: flex;
 }
 
 .arrows {
-  width: 72%;
-  margin: auto;
+  width: 1146px;
+  position: absolute;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  top: 50%;
 }
 
-.banner {
-  position: absolute;
+#leftArrow,
+#rightArrow {
+  cursor: pointer;
+}
+
+.banner img {
+  width: 100%;
+  /* position: relative; */
+  animation-duration: 1s;
+}
+.addAnimationLeftToRight {
+  animation-name: slideAnimationLeftToRight;
+}
+
+.addAnimationRightToLeft {
+  animation-name: slideAnimationRightToLeft;
+}
+
+@keyframes slideAnimationLeftToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideAnimationRightToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.banner img {
+  width: 100%;
+}
+
+.services {
+  margin-top: 80px;
+  margin: 0px -15px;
+}
+
+.servicesHeading {
+  margin-top: 80px;
+  padding: 0px 15px;
+}
+
+.servicesHeading p {
+  line-height: 72px;
+  font-size: 38px;
+}
+
+.servicesContent {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.servicesContentLeft {
+  flex: 50%;
+  padding: 0px 15px;
+}
+
+.servicesContentLeft p {
+  line-height: 42px;
+  font-size: 24px;
+  padding-bottom: 42px;
+}
+
+.servicesContentRight {
+  margin: -27px -15px;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesContentRightTop {
+  display: flex;
+  flex-direction: row;
+}
+
+.servicesContentRightBottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.technologyBox {
+  width: 264px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  border: 1px solid black;
+  margin: 27px 15px;
+}
+
+.technologyBox img {
+  padding: 57px 103px 32px 104px;
+}
+
+.technologyBox p {
+  padding-bottom: 27px;
+}
+
+hr.technologyEnd {
+  margin-top: 80px;
+  margin-bottom: 75px;
+}
+
+.luminaries {
+  display: flex;
+  flex-direction: column;
+}
+
+.luminariesTop {
+  margin-bottom: 56px;
+  font-size: 38px;
+  text-align: center;
+}
+
+.luminariesBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.luminaryPerson {
+  width: 264px;
+  text-align: center;
+}
+
+.luminaryPerson img {
+  object-fit: contain;
+}
+
+footer {
+  margin-top: 80px;
+  width: 100vw;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.footerData {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 80px;
+}
+
+.footerDiscription {
+  width: 264px;
+  font-size: 12px;
+  line-height: 22px;
+  margin-right: 34px;
+}
+
+.footerHeading {
+  line-height: 25px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.aboutIdol {
+  margin-right: 98px;
+}
+
+.footerOptions {
+  /* width: 192px; */
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.admission {
+  margin-right: 119px;
+}
+
+.getInTouchOptions {
+  margin: 0 -9.5px;
+}
+
+.getInTouchOptions img {
+  padding: 0 9.5px;
+}
+
+.copyRight hr.dashedHr {
+  border-top: 1px dashed white;
+  padding: 0px 8px;
+}
+
+.copyRight {
+  text-align: center;
+}
+
+p.copyRightText {
+  line-height: 30px;
+  font-size: 14px;
 }
