@@ -211,23 +211,31 @@ nav {
   padding: 0px 12px;
 }
 
-.slider {
+.sliderContainer {
   position: relative;
+  width: 100%;
 }
 
 .arrows {
-  width: 1146px;
-  /* width: 70%; */
   position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
   top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 #leftArrow,
 #rightArrow {
   cursor: pointer;
+}
+
+.banner {
+  width: 100%;
 }
 
 .banner img {
@@ -485,7 +493,6 @@ p.copyRightText {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 1000;
   }
 
   /* nav:hover .navLinks li {
