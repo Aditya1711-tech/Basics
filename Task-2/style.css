@@ -359,13 +359,23 @@ nav {
   margin: 27px 15px;
 }
 
-.technologyBox img {
-  padding: 57px 103px 32px 104px;
+.technologyBoxImgBox {
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  max-width: 60px;
+  padding-top: 44px;
+  padding-bottom: 32px;
 }
 
+/* .technologyBox img {
+} */
+
 .technologyBox p {
-  padding-bottom: 27px;
+  line-height: 42px;
+  font-size: 20px;
   font-family: "merriweather_sansbook";
+  padding-bottom: 27px;
 }
 
 hr.technologyEnd {
@@ -393,7 +403,7 @@ hr.technologyEnd {
 }
 
 .luminaryPerson {
-  width: 264px;
+  width: 20%;
   text-align: center;
 }
 
@@ -407,7 +417,7 @@ hr.technologyEnd {
 }
 
 .luminaryPerson img {
-  object-fit: contain;
+  width: 100%;
 }
 
 footer {
@@ -493,7 +503,7 @@ p.copyRightText {
 
 @media screen and (max-width: 1176px) {
   .container {
-    width: 70%;
+    max-width: 802px;
   }
 
   .navLinks {
@@ -514,5 +524,100 @@ p.copyRightText {
     margin: 6px 0;
     margin-bottom: 0;
     transition: 0.4s;
+  }
+
+  .navContainer {
+    padding: 20px 0px 19px 0px;
+  }
+
+  .servicesContentLeft {
+    flex: 100%;
+  }
+
+  .servicesContentRight {
+    flex: 100%;
+  }
+
+  .luminaryPerson {
+    flex: 50%;
+  }
+
+  .luminaryPerson img {
+    width: auto;
+  }
+
+  .servicesContentRight {
+    margin: -27px 25px;
+  }
+  .servicesContentRightTop {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px -25px;
+  }
+  .servicesContentRightBottom {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px -25px;
+  }
+
+  .technologyBoxImgBox {
+    width: 56px;
+    min-height: 138px;
+  }
+
+  .footerData {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0px -40px;
+  }
+
+  .footerDiscription {
+    flex: 50%;
+    padding: 0px 40px;
+    margin: 0;
+  }
+
+  .aboutIdol {
+    flex: 50%;
+    padding: 0px 40px;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .admission {
+    flex: 50%;
+    padding: 0px 40px;
+    margin: 0;
+  }
+
+  .getInTouch {
+    flex: 50%;
+    padding: 0px 40px;
+    margin: 0;
+  }
+
+  .servicesHeading p {
+    line-height: 48px;
+    font-size: 29px;
+    font-family: "poppinsbold";
+  }
+
+  .servicesContentLeft p {
+    line-height: 30px;
+    font-size: 20px;
+    padding-bottom: 42px;
+  }
+
+  .luminariesTop p {
+    line-height: 48px;
+    font-size: 29px;
+  }
+
+  .luminaryPerson p {
+    font-size: 11px;
+    padding-top: 20px;
+    margin-bottom: 40px;
   }
 }
