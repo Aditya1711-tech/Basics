@@ -1,6 +1,8 @@
 const leftArrow = document.getElementById("leftArrow");
 const rightArrow = document.getElementById("rightArrow");
 const bannerImage = document.getElementById("bannerImage");
+const hamBurger = document.querySelector(".hamburger-menu");
+const navMenu = document.querySelector(".navMenu");
 
 let cnt = 1;
 
@@ -38,5 +40,21 @@ const moveLeft = () => {
   }, 1000);
 };
 
+const makeMenuVisible = () => {
+  navMenu.style.visibility = "visible";
+};
+
+const makeMenuHidden = () => {
+  navMenu.style.visibility = "hidden";
+};
+
 leftArrow.addEventListener("click", moveLeft);
 rightArrow.addEventListener("click", moveRight);
+
+hamBurger.addEventListener("mouseover", () => {
+  makeMenuVisible();
+});
+
+hamBurger.addEventListener("mouseout", () => {
+  makeMenuHidden();
+});
