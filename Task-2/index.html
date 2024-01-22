@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
     <script src="script.js" defer></script>
     <title>EZIHIRE</title>
   </head>
@@ -44,23 +46,41 @@
           <li>FAQs</li>
         </ul>
       </div>
-      <div class="banner">
-        <img
-          id="bannerImage"
-          class=""
-          src="./design-4/image/Banner-1.png"
-          alt=""
-        />
-      </div>
 
-      <div class="arrows">
+      <div class="bannerImages">
+        <div class="banner">
+          <img
+            id="bannerImage"
+            class=""
+            src="./design-4/image/Banner-1.png"
+            alt=""
+          />
+        </div>
+        <div class="banner">
+          <img
+            id="bannerImage"
+            class=""
+            src="./design-4/image/Banner-2.png"
+            alt=""
+          />
+        </div>
+        <div class="banner">
+          <img
+            id="bannerImage"
+            class=""
+            src="./design-4/image/Banner-3.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- <div class="arrows">
         <div class="container">
           <div class="slider">
             <img id="leftArrow" src="./design-4/image/arrow_ic.png" alt="" />
             <img id="rightArrow" src="./design-4/image/arrow_ic-1.png" alt="" />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="container">
@@ -157,7 +177,7 @@
     <footer>
       <div class="container">
         <div class="footerData">
-          <div class="footerDiscription">
+          <div class="footerDiscription footerItem">
             <p>
               CU IDOL is a hub of online and distance learning. With our expert
               faculty, global curriculum, and interaction, explore best career
@@ -168,7 +188,7 @@
             </p>
           </div>
 
-          <div class="aboutIdol">
+          <div class="aboutIdol footerItem">
             <div class="footerHeading">
               <p>About IDOL</p>
             </div>
@@ -182,7 +202,7 @@
             </div>
           </div>
 
-          <div class="admission">
+          <div class="admission footerItem">
             <div class="footerHeading">
               <p>Admission</p>
             </div>
@@ -194,7 +214,7 @@
             </div>
           </div>
 
-          <div class="getInTouch">
+          <div class="getInTouch footerItem">
             <div class="footerHeading">
               <p>Get In Touch</p>
             </div>
@@ -217,5 +237,41 @@
         </div>
       </div>
     </footer>
+
+    <!-- <script type="text/javascript" src="./jQuery/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./jQuery/jquery-migrate.min.js"
+    ></script> -->
+
+    <script type="text/javascript" src="jQuery/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="jQuery/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".bannerImages").slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          // fade: true,
+          cssEase: "linear",
+        });
+
+        var left = $(".container").offset().left;
+        $(".slick-prev").css("left", left + "px");
+        $(".slick-next").css("right", left + "px");
+      });
+
+      $(window).resize(function () {
+        var left = $(".container").offset().left;
+        $(".slick-prev").css("left", left + "px");
+        $(".slick-next").css("right", left + "px");
+      });
+    </script>
   </body>
 </html>

@@ -48,8 +48,8 @@ const makeMenuHidden = () => {
   navMenu.style.visibility = "hidden";
 };
 
-leftArrow.addEventListener("click", moveLeft);
-rightArrow.addEventListener("click", moveRight);
+// leftArrow.addEventListener("click", moveLeft);
+// rightArrow.addEventListener("click", moveRight);
 
 hamBurger.addEventListener("mouseover", () => {
   makeMenuVisible();

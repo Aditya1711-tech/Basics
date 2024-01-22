@@ -245,9 +245,11 @@ nav {
 }
 
 .navMenu {
+  z-index: 10;
+  color: white;
   position: absolute;
   visibility: hidden;
-  background-color: white;
+  background-color: rgb(107, 14, 228);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -501,6 +503,14 @@ p.copyRightText {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+.slick-arrow {
+  z-index: 100000 !important;
+  position: absolute !important;
+  background-color: black !important;
+  height: 50px !important;
+  width: 50px !important;
+}
+
 @media screen and (max-width: 1176px) {
   .container {
     max-width: 802px;
@@ -554,6 +564,7 @@ p.copyRightText {
     align-items: center;
     margin: 0px -25px;
   }
+
   .servicesContentRightBottom {
     justify-content: space-between;
     align-items: center;
@@ -619,5 +630,124 @@ p.copyRightText {
     font-size: 11px;
     padding-top: 20px;
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .navContainer {
+    padding: 10px 0px 9px 0px;
+  }
+
+  .bar {
+    width: 20px;
+    height: 2.5px;
+    background-color: rgb(107, 14, 228);
+    margin: 4px 0;
+    margin-bottom: 0;
+    transition: 0.4s;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .servicesHeading p {
+    line-height: 35px;
+    font-size: 19px;
+    font-family: "poppinsbold";
+  }
+
+  .servicesContentLeft p {
+    line-height: 20px;
+    font-size: 12px;
+    padding-bottom: 22px;
+  }
+
+  .technologyBoxImgBox {
+    width: 36px;
+    min-height: 80px;
+  }
+
+  .servicesContentRightTop {
+    flex: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servicesContentRightBottom {
+    flex: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .technologyBox {
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .technologyBox p {
+    line-height: 21px;
+    font-size: 10px;
+    font-family: "merriweather_sansbook";
+    padding-bottom: 14px;
+  }
+
+  .technologyBoxImgBox {
+    width: 30%;
+  }
+  .technologyBoxImgBox img {
+    width: 100%;
+  }
+
+  .luminaryPerson {
+    flex: 100%;
+    /* width: 30%; */
+  }
+
+  .luminaryPerson img {
+    width: 60%;
+  }
+
+  .footerData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerItem {
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 40px;
+  }
+
+  .footerItem {
+    flex: 100%;
+  }
+
+  .luminariesTop p {
+    line-height: 35px;
+    font-size: 19px;
+  }
+
+  .luminaryPerson h4 {
+    font-family: "montserrat_alternatessemibold";
+    font-size: 60%;
+  }
+
+  .luminaryPerson p {
+    font-family: "montserrat_alternatesmedium";
+    font-size: 50%;
+    padding-top: 20px;
+  }
+
+  .footerData p {
+    font-size: 80%;
   }
 }
